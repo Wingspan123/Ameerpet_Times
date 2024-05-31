@@ -265,7 +265,7 @@ body {
 .banner-container .banner {
 	background: linear-gradient(-55deg, black 29%, #12588c 29.1%, #12588c 68%, black 68.1%);
 	border-radius: 5px;
-	margin: 80px 160px 10px 160px;
+	margin: 40px 160px 10px 160px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -804,7 +804,7 @@ body {
     transform: translate(-50%, -50%);
     display: inline-block;
     background-color: #007bff;
-    color: #fff;
+    color: #fff !important;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
@@ -814,6 +814,7 @@ body {
 
 .viewMore:hover {
     background-color: #0056b3;
+	color:white;
 }
 
 @media (max-width: 1024px) {
