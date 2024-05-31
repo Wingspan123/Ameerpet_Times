@@ -21,7 +21,6 @@
     z-index: 99;
 }
 
-
 /*** Spinner ***/
 #spinner {
     opacity: 0;
@@ -97,7 +96,7 @@
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
-    color: var(--primary);
+    color: rgb(7, 105, 185);
 }
 
 @media (max-width: 991.98px) {
@@ -192,8 +191,8 @@
 
 .header-carousel .owl-nav .owl-prev:hover,
 .header-carousel .owl-nav .owl-next:hover {
-    background: var(--primary);
-    border-color: var(--primary);
+    background: rgb(7, 105, 185);
+    border-color:rgb(7, 105, 185);
 }
 
 .page-header {
@@ -226,7 +225,7 @@
     height: 2px;
     top: 4px;
     left: -40px;
-    background: var(--primary);
+    background: rgb(7, 105, 185);
     z-index: -1;
 }
 
@@ -237,7 +236,7 @@
     height: 2px;
     bottom: 5px;
     left: -60px;
-    background: var(--primary);
+    background: rgb(7, 105, 185);
     z-index: -1;
 }
 
@@ -260,7 +259,18 @@
 
 .service-item:hover {
     margin-top: -10px;
-    background: var(--primary);
+    background: rgb(7, 105, 185);
+}
+.text-colour{
+    color: rgb(7, 105, 185);
+}
+.btn-colour{
+    background-color: rgb(7, 105, 185);
+    color:white;
+}
+.btn-colour:hover{
+    background-color: rgb(10, 127, 222);
+    color:white;
 }
 
 .service-item * {
@@ -337,7 +347,7 @@
 }
 
 .testimonial-carousel .owl-item.center .testimonial-text {
-    background: var(--primary) !important;
+    background:rgb(7, 105, 185) !important;
 }
 
 .testimonial-carousel .owl-item.center .testimonial-text * {
@@ -362,8 +372,8 @@
 }
 
 .testimonial-carousel .owl-dot.active {
-    background: var(--primary);
-    border-color: var(--primary);
+    background: rgb(7, 105, 185);
+    border-color: rgb(7, 105, 185);
 }
 
 
@@ -383,7 +393,7 @@
 }
 
 .footer .btn.btn-social:hover {
-    color: var(--primary);
+    color: rgb(7, 105, 185);
 }
 
 .footer .btn.btn-link {
