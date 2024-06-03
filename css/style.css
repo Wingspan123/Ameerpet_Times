@@ -1,4 +1,15 @@
 /********** Template CSS **********/
+body{
+    margin-left: 79px;
+    margin-top:50px;
+}
+.section{
+   
+    margin-left: -80px;  
+}
+
+
+
 :root {
     --primary: #06BBCC;
     --light: #F0FBFC;
