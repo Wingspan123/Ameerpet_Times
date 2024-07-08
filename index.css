@@ -256,6 +256,7 @@ body {
 }
 
 .banner-container {
+	
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -330,6 +331,11 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
+	
+	.banner-container {
+     margin-top: -40px;
+	}
+
 	.banner-container .banner {
 		margin: 20px 1px 1px 100px;
 	}

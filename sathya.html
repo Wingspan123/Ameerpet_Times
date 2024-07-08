@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+ 
+    <link href="institute.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <div class="wrapper">
+        <div class="sidebar">
+            <div class="profile">
+                <ul>
+                    <li>
+                        <a href="#" class="active">
+                            <span class="icon"><i class="fas fa-home"></i></span>
+                            <span class="item">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fas fa-desktop"></i></span>
+                            <span class="item">My Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fas fa-user-friends"></i></span>
+                            <span class="item">People</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fa-tachometer-alt"></i></span>
+                            <span class="item">Perfomance</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fas fa-database"></i></span>
+                            <span class="item">Development</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fas fa-chart-line"></i></span>
+                            <span class="item">Reports</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fas fa-user-shield"></i></span>
+                            <span class="item">Admin</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fas fa-cog"></i></span>
+                            <span class="item">Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <div class="top_navbar">
+                <div class="hamburger">
+                    <a href="#">
+                        <img src="img/company-logo.jpg" class="logo">
+                        <p class="company-name">Ameerpet Times</p>
+                    </a>
+
+                    <div class="custom-dropdown" onclick="toggleDropdown()">
+                        <img src="img/profile.jpg">
+                        <p class="userName">username</p>
+                        <i class="fas fa-caret-down"></i>
+                        <div class="dropdown-content" id="dropdownContent">
+                            <!-- Dropdown options -->
+                            <a href="">profile</a>
+                            <a href="">setting</a>
+                            <a href="">logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="iframeContainer">
+        <iframe src="https://sathyatech.com/" srolling="no" class="iframeContent">
+        </iframe>
+    </div>
+
+</body>
+
+</html>
