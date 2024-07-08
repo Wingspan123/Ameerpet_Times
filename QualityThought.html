@@ -80,7 +80,7 @@
         <div class="section">
             <div class="top_navbar">
                 <div class="hamburger">
-                    <a href="#">
+                    <a href="index.html">
                         <img src="img/company-logo.jpg" class="logo">
                         <p class="company-name">Ameerpet Times</p>
                     </a>
@@ -106,7 +106,12 @@
         <iframe src="https://qualitythought.in/" srolling="no" class="iframeContent">
         </iframe>
     </div>
-
+    <script>
+        var hamburger = document.querySelector(".hamburger");
+        hamburger.addEventListener("click", function () {
+            document.querySelector("body").classList.toggle("active");
+        })
+    </script>
 
 </body>
 
