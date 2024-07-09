@@ -255,12 +255,48 @@ body {
 	}
 }
 
+
+
+.banner-slider {
+    position: relative;
+    overflow: hidden;
+    margin: 0px auto;
+}
+
+.dots-container {
+    text-align: center;
+    margin-top: 0px;
+}
+
+.dot {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #555;
+}
+
+@media only screen and (max-width: 768px) {
+    .banner-slider {
+        max-width: 100%; /* Adjust for smaller screens */
+    }
+}
+
+
+
 .banner-container {
-	
 	display: flex;
 	align-items: center;
 	justify-content: center;
-
+	
+    transform: translateY(2px); /* Initial position and opacity */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transition effect */
 }
 
 .banner-container .banner {
@@ -363,6 +399,8 @@ body {
 		bottom: 0;
 	}
 }
+
+
 
 .main-container {
 	display: flex;

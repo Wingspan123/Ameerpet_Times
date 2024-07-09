@@ -15,13 +15,14 @@
 
 <body>
 
- <!-- Spinner Start -->
- <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-    <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-        <span class="sr-only">Loading...</span>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
     </div>
-</div>
-<!-- Spinner End -->
+    <!-- Spinner End -->
 
     <div class="wrapper">
         <div class="sidebar">
@@ -102,29 +103,74 @@
         </div>
     </div>
 
-    <div class="banner-container">
-        <div class="banner">
-            <div class="course">
-                <img src="img/course.png" alt="">
+    <div class="banner-slider">
+        <div class="banner-container">
+            <div class="banner">
+                <div class="course">
+                    <img src="img/banner-course1.png" alt="" height="210px">
+                </div>
+                <div class="content">
+                    <p>Dream big. Code even bigger. Start your coding journey today with our specialized software
+                        coaching.</p>
+                    <a href="#" class="btn">View offer</a>
+                </div>
+                <div class="women">
+                    <img src="img/banner-student1.png" alt="">
+                </div>
             </div>
-            <div class="content">
-                <span>upto</span>
-                <h3>50% 0ff</h3>
-                <p>offer ends after 5 days</p>
-                <a href="#" class="btn">veiw offer</a>
+        </div>
+
+        <div class="banner-container" style="display:none">
+            <div class="banner">
+                <div class="course">
+                    <img src="img/course.png" alt="" height="210px">
+                </div>
+                <div class="content">
+                    <span>Up to</span>
+                    <h3>50% Off</h3>
+                    <p>Offer ends after 5 days</p>
+                    <a href="#" class="btn">View offer</a>
+                </div>
+                <div class="women">
+                    <img src="img/teaching.png" alt="">
+                </div>
             </div>
-            <div class="women">
-                <img src="img/teaching.png" alt="">
+        </div>
+
+        <div class="banner-container" style="display:none">
+            <div class="banner">
+                <div class="course">
+                    <img src="img/banner-coures2.png" alt="" height="210px">
+                </div>
+                <div class="content">
+                    <p>Build your career in software with confidence. Enroll in our coaching institute and let your
+                        skills speak for themselves</p>
+                    <a href="#" class="btn">Enroll now</a>
+                </div>
+                <div class="women">
+                    <img src="img/banner-student2.png" alt="">
+                </div>
             </div>
         </div>
     </div>
 
+    <div class="dots-container">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+
     <div class="main-container">
         <div class="containers">
-            <button type="sumbit" id="instituteBtn1" class="instituteBtn"><div class="boxes box1">
-            </div></button>
-            <button type="sumbit" id="instituteBtn2" class="instituteBtn"><div class="boxes box2">
-            </div></button>
+            <button type="sumbit" id="instituteBtn1" class="instituteBtn">
+                <div class="boxes box1">
+                </div>
+            </button>
+            <button type="sumbit" id="instituteBtn2" class="instituteBtn">
+                <div class="boxes box2">
+                </div>
+            </button>
         </div>
 
         <div class="slider-container">
@@ -156,10 +202,14 @@
         </div>
 
         <div class="containers">
-            <button type="sumbit" id="instituteBtn3" class="instituteBtn"><div class="boxes box3">
-            </div></button>
-            <button type="sumbit" id="instituteBtn4" class="instituteBtn"> <div class="boxes box4">
-            </div></button>
+            <button type="sumbit" id="instituteBtn3" class="instituteBtn">
+                <div class="boxes box3">
+                </div>
+            </button>
+            <button type="sumbit" id="instituteBtn4" class="instituteBtn">
+                <div class="boxes box4">
+                </div>
+            </button>
         </div>
     </div>
     <br>
@@ -341,7 +391,7 @@
                     <button type="sumbit">Enroll</button>
                 </div>
             </div>
-           <a href="sathya.html"><button type="submit" class="viewMore">view more</button></a>
+            <a href="sathya.html"><button type="submit" class="viewMore">view more</button></a>
         </div>
         <div class="containers">
             <div class="boxes details">
@@ -401,7 +451,7 @@
                         <h3>Power Bi</h3>
                         <p>dua:60days</p>
                         <p>start date:may 28</p>
-                        
+
                     </div>
                     <button type="sumbit">Enroll</button>
                 </div>
@@ -413,7 +463,7 @@
                         <h3>Full Stack Web Development</h3>
                         <p>dua:90days</p>
                         <p>start date:may 20</p>
-                       
+
                     </div>
                     <button type="sumbit">Enroll</button>
                 </div>
@@ -425,7 +475,7 @@
                         <h3>Full Stack Java</h3>
                         <p>dua:120days</p>
                         <p>start date:june 1</p>
-                        
+
                     </div>
                     <button type="sumbit">Enroll</button>
                 </div>
@@ -461,7 +511,7 @@
                 <p>Apprentice Training</p>
             </div>
         </div>
-        
+
     </div>
 
 
@@ -503,7 +553,7 @@
                         <h3>Power Bi</h3>
                         <p>dua:60days</p>
                         <p>start date:may 28</p>
-                        
+
                     </div>
                     <button type="sumbit">Enroll</button>
                 </div>
@@ -515,7 +565,7 @@
                         <h3>Full Stack Web Development</h3>
                         <p>dua:90days</p>
                         <p>start date:may 20</p>
-                       
+
                     </div>
                     <button type="sumbit">Enroll</button>
                 </div>
@@ -527,7 +577,7 @@
                         <h3>Full Stack Java</h3>
                         <p>dua:120days</p>
                         <p>start date:june 1</p>
-                        
+
                     </div>
                     <button type="sumbit">Enroll</button>
                 </div>
@@ -562,18 +612,53 @@
                 <p>Apprentice Training</p>
             </div>
         </div>
-        
+
     </div>
 
     <script>
-        var hamburger = document.querySelector(".hamburger");
-        hamburger.addEventListener("click", function () {
-            document.querySelector("body").classList.toggle("active");
-        })
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const dots = document.querySelectorAll(".dot");
+            const banners = document.querySelectorAll(".banner-container");
+            let currentSlide = 0;
+            let slideInterval = setInterval(nextSlide, 3000); // Interval for automatic sliding (adjust timing as needed)
+
+            // Function to show next slide
+            function nextSlide() {
+                // Hide all banners
+                banners.forEach(banner => banner.style.display = "none");
+                // Remove active class from all dots
+                dots.forEach(dot => dot.classList.remove("active"));
+                // Move to the next slide
+                currentSlide = (currentSlide + 1) % banners.length;
+                // Show the selected banner and activate the corresponding dot
+                banners[currentSlide].style.display = "flex";
+                dots[currentSlide].classList.add("active");
+            }
+
+            // Function to handle dot click events
+            dots.forEach((dot, index) => {
+                dot.addEventListener("click", () => {
+                    // Clear interval to stop automatic sliding
+                    clearInterval(slideInterval);
+                    // Hide all banners
+                    banners.forEach(banner => banner.style.display = "none");
+                    // Remove active class from all dots
+                    dots.forEach(dot => dot.classList.remove("active"));
+                    // Show the selected banner and activate the corresponding dot
+                    banners[index].style.display = "flex";
+                    dots[index].classList.add("active");
+                    currentSlide = index;
+                    // Restart automatic sliding after a delay (adjust as needed)
+                    slideInterval = setInterval(nextSlide, 3000);
+                });
+            });
+
+        });
+
     </script>
     <script src="index.js"></script>
     <script src="js/main.js"></script>
 </body>
 
 </html>
-
