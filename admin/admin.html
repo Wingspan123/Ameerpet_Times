@@ -1,0 +1,98 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Upload</title>
+  <style>
+    .image-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image-item {
+  margin: 10px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  position: relative;
+}
+
+.image-item img {
+  max-width: 200px;
+  height: auto;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+  </style>
+</head>
+<body>
+  <li>
+    <a href="../public/index.html">
+        <span class="icon"><i class="fas fa-desktop"></i></span>
+        <span class="item">My Dashboard</span>
+    </a>
+</li>
+  <h1>Upload Image</h1>
+  <form action="/api/images/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="image" accept="image/*" required>
+
+    <button type="submit">Upload</button>
+  </form>
+
+  <!-- Add this where you want to display the images -->
+<h2>Image Gallery</h2>
+<div class="image-container" id="imageContainer"></div>
+
+<script>
+  // Fetch and display images
+  function fetchImages() {
+    fetch('/api/images/uploads')
+      .then(response => response.json())
+      .then(images => {
+        const imageContainer = document.getElementById('imageContainer');
+        imageContainer.innerHTML = ''; // Clear existing images
+
+        images.forEach(image => {
+          const div = document.createElement('div');
+          div.classList.add('image-item');
+          div.innerHTML = `
+            <img src="${image.path}" alt="${image.filename}">
+            <button class="delete-btn" onclick="deleteImage(${image.id})">Delete</button>
+          `;
+          imageContainer.appendChild(div);
+        });
+      })
+      .catch(error => console.error('Error fetching images:', error));
+  }
+
+  // Delete image
+  function deleteImage(id) {
+    fetch(`/api/images/${id}`, { method: 'DELETE' })
+      .then(response => {
+        if (response.ok) {
+          alert('Image deleted successfully');
+          fetchImages(); // Refresh the image list
+        } else {
+          alert('Error deleting image');
+        }
+      })
+      .catch(error => console.error('Error deleting image:', error));
+  }
+
+  // Initial fetch of images
+  document.addEventListener('DOMContentLoaded', fetchImages);
+</script>
+
+</body>
+</html>

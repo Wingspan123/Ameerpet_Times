@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang=”en”>
+
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ameerpet Times</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+
+    <!-- Spinner Start ->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!- Spinner End -->
+
+    <div class="wrapper">
+        <div class="sidebar">
+            <div class="profile">
+                <ul>
+                    <li>
+                        <a href="#" class="active">
+                            <span class="icon"><i class="fas fa-home"></i></span>
+                            <span class="item">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fas fa-desktop"></i></span>
+                            <span class="item">My Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fas fa-user-friends"></i></span>
+                            <span class="item">People</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/admin">
+                            <span class="icon"><i class="fa-tachometer-alt"></i></span>
+                            <span class="item">Perfomance</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fas fa-database"></i></span>
+                            <span class="item">Development</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fas fa-cog"></i></span>
+                            <span class="item">Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <div class="top_navbar">
+                <div class="hamburger">
+                    <a href="index.html">
+                        <img src="img/company-logo.jpg" class="logo">
+                        <p class="company-name">Ameerpet Times</p>
+                    </a>
+                    <div class="custom-dropdown" onclick="toggleDropdown()">
+                        <img src="img/profile.jpg">
+                        <p class="userName">username</p>
+                        <i class="fas fa-caret-down"></i>
+                        <div class="dropdown-content" id="dropdownContent">
+                            <!-- Dropdown options -->
+                            <a href="">profile</a>
+                            <a href="">setting</a>
+                            <a href="">logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!----
+    <div class="banner-slider">
+        <div class="banner-container" id="banner1">
+                    <img src="img/banner1.jpg" alt="" height="210px">
+        </div>
+
+        <div class="banner-container" style="display:none" id="banner2">
+                    <img src="img/banner2.jpg" alt="" height="210px">
+        </div>
+
+        <div class="banner-container" style="display:none" id="banner3">
+                    <img src="img/banner1.jpg" alt="" height="210px">
+        </div>
+    </div>
+-->
+
+  <!-- Add this where you want to display the images -->
+  <h2>Image Gallery</h2>
+  <div class="image-container" id="imageContainer">
+
+  </div>
+
+<div class="banner-slider">
+    <div class="banner-container">
+        <div class="banner">
+            <div class="course">
+                <img src="img/banner1.jpg" alt="" height="210px">
+            </div>
+            <div class="women">
+                <img src="img/banner1.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="banner-container" style="display:none">
+        <div class="banner">
+            <div class="course">
+                <img src="img/course.png" alt="" height="210px">
+            </div>
+            <div class="content">
+                <span>Up to</span>
+                <h3>50% Off</h3>
+                <p>Offer ends after 5 days</p>
+                <a href="#" class="btn">View offer</a>
+            </div>
+            <div class="women">
+                <img src="img/teaching.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="banner-container" style="display:none">
+        <div class="banner">
+            <div class="course">
+                <img src="img/banner-coures2.png" alt="" height="210px">
+            </div>
+            <div class="content">
+                <p>Build your career in software with confidence. Enroll in our coaching institute and let your
+                    skills speak for themselves</p>
+                <a href="#" class="btn">Enroll now</a>
+            </div>
+            <div class="women">
+                <img src="img/banner-student2.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="dots-container">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+
+    <div class="main-container">
+        <div class="containers">
+            <button type="sumbit" id="instituteBtn1" class="instituteBtn">
+                <div class="boxes box1">
+                </div>
+            </button>
+            <button type="sumbit" id="instituteBtn2" class="instituteBtn">
+                <div class="boxes box2">
+                </div>
+            </button>
+        </div>
+
+        <div class="slider-container">
+            <div class="slider">
+                <input type="radio" id="trigger1" name="slider">
+                <label for="trigger1"><span class="sr-only">Slide 1 of 5. A photo of a mountain pass with a winding path
+                        along the river and a view of distant mountains hiding in the mist.</span></label>
+                <div class="slide bg1"></div>
+
+                <input type="radio" id="trigger2" name="slider" checked>
+                <label for="trigger2"><span class="sr-only">Slide 2 of 5. A photo of a bird eating sunflower seeds from
+                        an open hand.</span></label>
+                <div class="slide bg2"></div>
+
+                <input type="radio" id="trigger3" name="slider">
+                <label for="trigger3"><span class="sr-only">Slide 3 of 5. A photo of a concrete bridge over the river
+                        with high voltage power lines on both banks.</span></label>
+                <div class="slide bg3"></div>
+
+                <input type="radio" id="trigger4" name="slider">
+                <label for="trigger4"><span class="sr-only">Slide 4 of 5. A photo of a lake surrounded by the forest
+                        with mountains in the background.</span></label>
+                <div class="slide bg4"></div>
+
+                <input type="radio" id="trigger5" name="slider">
+                <label for="trigger5"><span class="sr-only">Slide 5 of 5. A photo of a forest.</span></label>
+                <div class="slide bg5"></div>
+            </div>
+        </div>
+
+        <div class="containers">
+            <button type="sumbit" id="instituteBtn3" class="instituteBtn">
+                <div class="boxes box3">
+                </div>
+            </button>
+            <button type="sumbit" id="instituteBtn4" class="instituteBtn">
+                <div class="boxes box4">
+                </div>
+            </button>
+        </div>
+    </div>
+    <br>
+
+
+    <div class="main-container insti" id="nareshIt">
+        <div class="containers">
+            <div class="boxes details" id="courses">
+                <h3>Courses</h3>
+                <p>sFull Stack Java</p>
+                <p>Full Stack Web Development</p>
+                <p>Full Stack python</p>
+                <p>Full Stack .Net</p>
+                <p>DataScience</p>
+                <p>Digital Marketing</p>
+                <p>DevOps With AWS</p>
+                <p>SalesForce with LWC</p>
+                <p>Power BI</p>
+            </div>
+            <div class="boxes details">
+                <h3>We Offer</h3>
+                <img src="https://www.3pillarglobal.com/wp-content/uploads/2021/12/Software-development-training-strategy.jpg"
+                    width="180px" height="180px">
+            </div>
+        </div>
+        <div class="institute">
+            <h3 class="instituteName">Naresh I Technologies</h3>
+            <p>The NareshIT Software Training Institute of Hyderabad, India offers multiple training schedules to meet
+                our student’s needs. Most of our students already have careers, work obligations, children etc., and our
+                software training classes are designed to work well within these lifestyles.NNV Naresh, Founder and
+                Managing Director. A recipient of “International Achievers Award for Education Excellence“, NNV Naresh
+                is an entrepreneur armed with a noble vision to make a difference in the career aspirations of the
+                students.
+            </p>
+            <div class="Classes">
+                <div class="card">
+                    <div class="upperdiv">
+                        <p>Power Bi</p>
+                    </div>
+                    <div class="lowerdiv">
+                        <h3>Power Bi</h3>
+                        <p>dua:60days</p>
+                        <p>start date:may 28</p>
+                    </div>
+                    <button type="sumbit">Enroll</button>
+                </div>
+                <div class="card">
+                    <div class="upperdiv">
+                        <p>Full Stack Web Development</p>
+                    </div>
+                    <div class="lowerdiv">
+                        <h3>Full Stack Web Development</h3>
+                        <p>dua:90days</p>
+                        <p>start date:may 20</p>
+                    </div>
+                    <button type="sumbit">Enroll</button>
+                </div>
+                <div class="card">
+                    <div class="upperdiv">
+                        <p>Full Stack Java</p>
+                    </div>
+                    <div class="lowerdiv">
+                        <h3>Full Stack Java</h3>
+                        <p>dua:120days</p>
+                        <p>start date:june 1</p>
+
+                    </div>
+                    <button type="sumbit">Enroll</button>
+                </div>
+                <div class="card">
+                    <div class="upperdiv">
+                        <p>Full Stack .Net</p>
+                    </div>
+                    <div class="lowerdiv">
+                        <h3>Full Stack .Net</h3>
+                        <p>dua:60days</p>
+                        <p>start date:may 25</p>
+                    </div>
+                    <button type="sumbit">Enroll</button>
+                </div>
+            </div>
+            <a href="nareshIt.html"><button type="submit" class="viewMore">view more</button></a>
+        </div>
+        <div class="containers">
+            <div class="boxes details">
+                <h3>Class Timings</h3>
+                <img src="https://cdni.iconscout.com/illustration/premium/thumb/delaying-tasks-10381915-8392642.png?f=webp"
+                    width="190px" height="180px">
+                <h4 style="text-align: center;">9:00am to 6:00pm</h4>
+            </div>
+            <div class="boxes details">
+                <h3>Type Of Trainings</h3>
+                <p>Online Training</p>
+                <p>Offline Training</p>
+                <p>weekend Training</p>
+                <p>Corporate Training</p>
+                <p>Intenship Training</p>
+                <p>Apprentice Training</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main-container" id="sathya">
+        <div class="containers">
+            <div class="boxes details" id="courses">
+                <h3>Courses</h3>
+                <p>Full Stack Java</p>
+                <p>Full Stack Web Development</p>
+                <p>Full Stack python</p>
+                <p>Full Stack .Net</p>
+                <p>DataScience</p>
+                <p>Digital Marketing</p>
+                <p>DevOps With AWS</p>
+                <p>SalesForce with LWC</p>
+                <p>Power BI</p>
+            </div>
+            <div class="boxes details">
+                <h3>We Offer</h3>
+                <img src="https://www.3pillarglobal.com/wp-content/uploads/2021/12/Software-development-training-strategy.jpg"
+                    width="180px" height="180px">
+            </div>
+        </div>
+        <div class="institute">
+            <h3 class="instituteName">Sathya Technologies</h3>
+            <p>The NareshIT Software Training Institute of Hyderabad, India offers multiple training schedules to meet
+                our student’s needs. Most of our students already have careers, work obligations, children etc., and our
+                software training classes are designed to work well within these lifestyles.NNV Naresh, Founder and
+                Managing Director. A recipient of “International Achievers Award for Education Excellence“, NNV Naresh
+                is an entrepreneur armed with a noble vision to make a difference in the career aspirations of the
+                students.
+            </p>
+            <div class="Classes">
+                <div class="card">
+                    <div class="upperdiv">
+                        <p>Power Bi</p>
+                    </div>
+                    <div class="lowerdiv">
+                        <h3>Power Bi</h3>
+                        <p>dua:60days</p>
+                        <p>start date:may 28</p>
+
+                    </div>
+                    <button type="sumbit">Enroll</button>
+                </div>
+                <div class="card">
+                    <div class="upperdiv">
+                        <p>Full Stack Web Development</p>
+                    </div>
+                    <div class="lowerdiv">
+                        <h3>Full Stack Web Development</h3>
+                        <p>dua:90days</p>
+                        <p>start date:may 20</p>
+
+                    </div>
+                    <button type="sumbit">Enroll</button>
+                </div>
+                <div class="card">
+                    <div class="upperdiv">
+                        <p>Full Stack Java</p>
+                    </div>
+                    <div class="lowerdiv">
+                        <h3>Full Stack Java</h3>
+                        <p>dua:120days</p>
+                        <p>start date:june 1</p>
+
+                    </div>
+                    <button type="sumbit">Enroll</button>
+                </div>
+                <div class="card">
+                    <div class="upperdiv">
+                        <p>Full Stack .Net</p>
+                    </div>
+                    <div class="lowerdiv">
+                        <h3>Full Stack .Net</h3>
+                        <p>dua:60days</p>
+                        <p>start date:may 25</p>
+                    </div>
+                    <button type="sumbit">Enroll</button>
+                </div>
+            </div>
+            <a href="sathya.html"><button type="submit" class="viewMore">view more</button></a>
+        </div>
+        <div class="containers">
+            <div class="boxes details">
+                <h3>Class Timings</h3>
+                <img src="https://cdni.iconscout.com/illustration/premium/thumb/delaying-tasks-10381915-8392642.png?f=webp"
+                    width="190px" height="180px">
+                <h4 style="text-align: center;">9:00am to 6:00pm</h4>
+            </div>
+            <div class="boxes details">
+                <h3>Type Of Trainings</h3>
+                <p>Online Training</p>
+                <p>Offline Training</p>
+                <p>weekend Training</p>
+                <p>Corporate Training</p>
+                <p>Intenship Training</p>
+                <p>Apprentice Training</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main-container" id="Qspiders">
+        <div class="containers">
+            <div class="boxes details" id="courses">
+                <h3>Courses</h3>
+                <p>Full Stack Java</p>
+                <p>Full Stack Web Development</p>
+                <p>Full Stack python</p>
+                <p>Full Stack .Net</p>
+                <p>DataScience</p>
+                <p>Digital Marketing</p>
+                <p>DevOps With AWS</p>
+                <p>SalesForce with LWC</p>
+                <p>Power BI</p>
+            </div>
+            <div class="boxes details">
+                <h3>We Offer</h3>
+                <img src="https://www.3pillarglobal.com/wp-content/uploads/2021/12/Software-development-training-strategy.jpg"
+                    width="180px" height="180px">
+            </div>
+        </div>
+        <div class="institute">
+            <h3 class="instituteName">Qspiders Technologies</h3>
+            <p>The NareshIT Software Training Institute of Hyderabad, India offers multiple training schedules to meet
+                our student’s needs. Most of our students already have careers, work obligations, children etc., and our
+                software training classes are designed to work well within these lifestyles.NNV Naresh, Founder and
+                Managing Director. A recipient of “International Achievers Award for Education Excellence“, NNV Naresh
+                is an entrepreneur armed with a noble vision to make a difference in the career aspirations of the
+                students.
+            </p>
+            <div class="Classes">
+                <div class="card">
+                    <div class="upperdiv">
+                        <p>Power Bi</p>
+                    </div>
+                    <div class="lowerdiv">
+                        <h3>Power Bi</h3>
+                        <p>dua:60days</p>
+                        <p>start date:may 28</p>
+
+                    </div>
+                    <button type="sumbit">Enroll</button>
+                </div>
+                <div class="card">
+                    <div class="upperdiv">
+                        <p>Full Stack Web Development</p>
+                    </div>
+                    <div class="lowerdiv">
+                        <h3>Full Stack Web Development</h3>
+                        <p>dua:90days</p>
+                        <p>start date:may 20</p>
+
+                    </div>
+                    <button type="sumbit">Enroll</button>
+                </div>
+                <div class="card">
+                    <div class="upperdiv">
+                        <p>Full Stack Java</p>
+                    </div>
+                    <div class="lowerdiv">
+                        <h3>Full Stack Java</h3>
+                        <p>dua:120days</p>
+                        <p>start date:june 1</p>
+
+                    </div>
+                    <button type="sumbit">Enroll</button>
+                </div>
+                <div class="card">
+                    <div class="upperdiv">
+                        <p>Full Stack .Net</p>
+                    </div>
+                    <div class="lowerdiv">
+                        <h3>Full Stack .Net</h3>
+                        <p>dua:60days</p>
+                        <p>start date:may 25</p>
+                    </div>
+                    <button type="sumbit">Enroll</button>
+                </div>
+            </div>
+            <a href="Qspiders.html"><button type="submit" class="viewMore">view more</button></a>
+            </button>
+        </div>
+        <div class="containers">
+            <div class="boxes details">
+                <h3>Class Timings</h3>
+                <img src="https://cdni.iconscout.com/illustration/premium/thumb/delaying-tasks-10381915-8392642.png?f=webp"
+                    width="190px" height="180px">
+                <h4 style="text-align: center;">9:00am to 6:00pm</h4>
+            </div>
+            <div class="boxes details">
+                <h3>Type Of Trainings</h3>
+                <p>Online Training</p>
+                <p>Offline Training</p>
+                <p>weekend Training</p>
+                <p>Corporate Training</p>
+                <p>Intenship Training</p>
+                <p>Apprentice Training</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="main-container" id="QualityThought">
+        <div class="containers">
+            <div class="boxes details" id="courses">
+                <h3>Courses</h3>
+                <p>Full Stack Java</p>
+                <p>Full Stack Web Development</p>
+                <p>Full Stack python</p>
+                <p>Full Stack .Net</p>
+                <p>DataScience</p>
+                <p>Digital Marketing</p>
+                <p>DevOps With AWS</p>
+                <p>SalesForce with LWC</p>
+                <p>Power BI</p>
+            </div>
+            <div class="boxes details">
+                <h3>We Offer</h3>
+                <img src="https://www.3pillarglobal.com/wp-content/uploads/2021/12/Software-development-training-strategy.jpg"
+                    width="180px" height="180px">
+            </div>
+        </div>
+        <div class="institute">
+            <h3 class="instituteName">Quality Thought Technologies</h3>
+            <p>The NareshIT Software Training Institute of Hyderabad, India offers multiple training schedules to meet
+                our student’s needs. Most of our students already have careers, work obligations, children etc., and our
+                software training classes are designed to work well within these lifestyles.NNV Naresh, Founder and
+                Managing Director. A recipient of “International Achievers Award for Education Excellence“, NNV Naresh
+                is an entrepreneur armed with a noble vision to make a difference in the career aspirations of the
+                students.
+            </p>
+            <div class="Classes">
+                <div class="card">
+                    <div class="upperdiv">
+                        <p>Power Bi</p>
+                    </div>
+                    <div class="lowerdiv">
+                        <h3>Power Bi</h3>
+                        <p>dua:60days</p>
+                        <p>start date:may 28</p>
+
+                    </div>
+                    <button type="sumbit">Enroll</button>
+                </div>
+                <div class="card">
+                    <div class="upperdiv">
+                        <p>Full Stack Web Development</p>
+                    </div>
+                    <div class="lowerdiv">
+                        <h3>Full Stack Web Development</h3>
+                        <p>dua:90days</p>
+                        <p>start date:may 20</p>
+
+                    </div>
+                    <button type="sumbit">Enroll</button>
+                </div>
+                <div class="card">
+                    <div class="upperdiv">
+                        <p>Full Stack Java</p>
+                    </div>
+                    <div class="lowerdiv">
+                        <h3>Full Stack Java</h3>
+                        <p>dua:120days</p>
+                        <p>start date:june 1</p>
+
+                    </div>
+                    <button type="sumbit">Enroll</button>
+                </div>
+                <div class="card">
+                    <div class="upperdiv">
+                        <p>Full Stack .Net</p>
+                    </div>
+                    <div class="lowerdiv">
+                        <h3>Full Stack .Net</h3>
+                        <p>dua:60days</p>
+                        <p>start date:may 25</p>
+                    </div>
+                    <button type="sumbit">Enroll</button>
+                </div>
+            </div>
+            <a href="QualityThought.html"><button type="submit" class="viewMore">view more</button></a>
+        </div>
+        <div class="containers">
+            <div class="boxes details">
+                <h3>Class Timings</h3>
+                <img src="https://cdni.iconscout.com/illustration/premium/thumb/delaying-tasks-10381915-8392642.png?f=webp"
+                    width="190px" height="180px">
+                <h4 style="text-align: center;">9:00am to 6:00pm</h4>
+            </div>
+            <div class="boxes details">
+                <h3>Type Of Trainings</h3>
+                <p>Online Training</p>
+                <p>Offline Training</p>
+                <p>weekend Training</p>
+                <p>Corporate Training</p>
+                <p>Intenship Training</p>
+                <p>Apprentice Training</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const dots = document.querySelectorAll(".dot");
+            const banners = document.querySelectorAll(".banner-container");
+            let currentSlide = 0;
+            let slideInterval = setInterval(nextSlide, 3000); // Interval for automatic sliding (adjust timing as needed)
+
+            // Function to show next slide
+            function nextSlide() {
+                // Hide all banners
+                banners.forEach(banner => banner.style.display = "none");
+                // Remove active class from all dots
+                dots.forEach(dot => dot.classList.remove("active"));
+                // Move to the next slide
+                currentSlide = (currentSlide + 1) % banners.length;
+                // Show the selected banner and activate the corresponding dot
+                banners[currentSlide].style.display = "flex";
+                dots[currentSlide].classList.add("active");
+            }
+
+            // Function to handle dot click events
+            dots.forEach((dot, index) => {
+                dot.addEventListener("click", () => {
+                    // Clear interval to stop automatic sliding
+                    clearInterval(slideInterval);
+                    // Hide all banners
+                    banners.forEach(banner => banner.style.display = "none");
+                    // Remove active class from all dots
+                    dots.forEach(dot => dot.classList.remove("active"));
+                    // Show the selected banner and activate the corresponding dot
+                    banners[index].style.display = "flex";
+                    dots[index].classList.add("active");
+                    currentSlide = index;
+                    // Restart automatic sliding after a delay (adjust as needed)
+                    slideInterval = setInterval(nextSlide, 3000);
+                });
+            });
+
+        });
+
+          // Fetch and display images
+  function fetchImages() {
+    fetch('/api/images/uploads')
+      .then(response => response.json())
+      .then(images => {
+        const imageContainer = document.getElementById('imageContainer');
+        imageContainer.innerHTML = ''; // Clear existing images
+
+        images.forEach(image => {
+          const div = document.createElement('div');
+          div.classList.add('image-item');
+          div.innerHTML = `
+            <img src="${image.path}" alt="${image.filename}">
+            <button class="delete-btn" onclick="deleteImage(${image.id})">Delete</button>
+          `;
+          imageContainer.appendChild(div);
+        });
+      })
+      .catch(error => console.error('Error fetching images:', error));
+  }
+
+    </script>
+
+</body>
+
+</html>
